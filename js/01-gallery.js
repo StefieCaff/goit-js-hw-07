@@ -6,15 +6,15 @@ console.log(galleryItems);
 const gallery = document.querySelector(".gallery");
 const galleryLink = document.querySelector(".gallery__link");
 const galleryImage = document.querySelector(".gallery__image");
+const selectedImage = galleryImage.dataset.source;
 
-console.log(galleryImage.dataset.source);
-
-gallery.addEventListener("click", selectedImage);
-
-function selectedImage(event) {
+function selectedImageModal(event) {
     event.preventDefault;
     if (event.target.nodeName !== 'IMG') {
         return;
     }
-    const selectedImage = galleryImage.dataset.source;
-}
+    const imageModal = event.target.dataset.source;
+    console.log(imageModal);
+ }
+
+gallery.addEventListener("click", selectedImageModal);
