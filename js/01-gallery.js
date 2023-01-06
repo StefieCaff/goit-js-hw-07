@@ -18,3 +18,9 @@ function selectedImageModal(event) {
  }
 
 gallery.addEventListener("click", selectedImageModal);
+
+const instance = basicLightbox.create(`
+   document.querySelector(".galleryLink);
+`)
+
+instance.show()
