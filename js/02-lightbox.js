@@ -11,7 +11,7 @@ const galleryMarkup = galleryItems.map((image) =>
   `<a class="gallery__item" href=${image.original}>
      <img class="gallery__image" src=${image.preview} alt=${image.description} />
    </a>`
-).join(" ");
+).join("");
 
 //add gallery html into dom
 gallery.insertAdjacentHTML("beforeEnd", galleryMarkup);
@@ -26,7 +26,7 @@ function selectedImageLibraryModal(event) {
 };
 
 // initialize simple lightbox image library
-let imageLibraryModal = new SimpleLightbox('.gallery a');
+let imageLibraryModal = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });
 
 
 //add click event for div/img delegation 
