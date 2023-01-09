@@ -6,7 +6,11 @@ const gallery = document.querySelector(".gallery");
 
 //gallery markup from gallery items Array of image objects
 const galleryMarkup = galleryItems.map((image) =>
-    `<div class="gallery__item"><a class="gallery__link" href=${image.original}><img class="gallery__image" src=${image.preview} data-source=${image.original} alt=${image.description} /></a></div>`
+  `<div class="gallery__item">
+     <a class="gallery__link" href=${image.original}>
+       <img class="gallery__image" src=${image.preview} data-source=${image.original} alt=${image.description} />
+    </a>
+   </div>`
 ).join("");
 
 //add gallery html into dom
