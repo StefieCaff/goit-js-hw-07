@@ -29,7 +29,7 @@ function selectedImageModal(event) {
   )
   imageModal.show();
 
-
+//escape button closes modal functionality added when modal opens
   imageModal.show(() => document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
       imageModal.close();
