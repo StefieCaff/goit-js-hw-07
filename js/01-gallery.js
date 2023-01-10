@@ -27,8 +27,18 @@ function selectedImageModal(event) {
   const imageModal = basicLightbox.create(
         `<img src="${fullSizeImg}"/>`
   )
-  imageModal.show()
- }
+  imageModal.show();
+
+
+  imageModal.show(() => document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      imageModal.close();
+    }
+  }));
+
+  };
+
+ 
 
  //click listening with above function
 gallery.addEventListener("click", selectedImageModal);
