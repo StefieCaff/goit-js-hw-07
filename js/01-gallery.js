@@ -38,7 +38,5 @@ function selectedImageModal(event) {
 
   };
 
- 
-
  //click listening with above function
 gallery.addEventListener("click", selectedImageModal);
